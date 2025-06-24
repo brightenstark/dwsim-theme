@@ -1,0 +1,168 @@
+{# 
+/**
+ * @file
+ * Main page template for DWSIM Theme.
+ */
+#}
+<!DOCTYPE html>
+<html{{ html_attributes }}>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head-placeholder token="{{ placeholder_token }}">
+  <title>{{ head_title|safe_join(' | ') }}</title>
+  <css-placeholder token="{{ placeholder_token }}">
+  <js-placeholder token="{{ placeholder_token }}">
+</head>
+<body{{ attributes.addClass(body_classes) }}>
+  {# Top Banner with Logos #}
+  <header class="top-banner py-2 bg-light">
+    <div class="container d-flex justify-content-between align-items-center">
+      <img src="{{ base_path ~ directory }}/logo.svg" alt="DWSIM Logo" height="40">
+      {% if fossee_logo_url %}
+        <img src="{{ fossee_logo_url }}" alt="FOSSEE Logo" height="30">
+      {% endif %}
+    </div>
+  </header>
+
+  {# Main Navigation #}
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="main-nav">
+        {{ page.navigation }}
+      </div>
+    </div>
+  </nav>
+
+  {# Hero Section #}
+  <section class="hero-section py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        {# Left: About Content #}
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <h1>About DWSIM</h1>
+          <p>DWSIM is a multiplatform open source chemical process simulator for Windows, Linux, macOS, Android, and iOS. It allows chemical engineers to model industrial processes using dynamic thermodynamic calculations and rigorous unit operation models.</p>
+          <p>DWSIM's capabilities include petroleum characterization, electrolytes, reactions, and more, making it suitable for both academic and industrial applications.</p>
+        </div>
+
+        {# Right: Image Slider #}
+        <div class="col-lg-6">
+          {% if slider_images %}
+            <div id="heroSlider" class="carousel slide shadow" data-bs-ride="carousel">
+              <div class="carousel-inner rounded">
+                {% for image in slider_images %}
+                  <div class="carousel-item {{ loop.first ? 'active' : '' }}">
+                    <img src="{{ image.url }}" class="d-block w-100" alt="{{ image.alt }}">
+                  </div>
+                {% endfor %}
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#heroSlider" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#heroSlider" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {# Main Content #}
+  <main class="main-content py-5">
+    <div class="container">
+      <div class="row">
+        {# Get Involved Section #}
+        <div class="col-lg-12 mb-5">
+          <div class="get-involved-section text-center">
+            <h2 class="mb-4">Get Involved</h2>
+            <a href="/get-involved" class="btn btn-primary btn-lg">Join Our Community</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row">
+        {# Left Column: Activities #}
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <div class="card h-100">
+            <div class="card-body">
+              <h2 class="h4 mb-3">Activities</h2>
+              <ul class="activities-list">
+                <li>Flowsheeting Project</li>
+                <li>Custom Modelling Project</li>
+                <li>Textbook Companion</li>
+                <li>Lab Migration</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {# Center Column: Resources and Events #}
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <div class="card h-100">
+            <div class="card-body">
+              <h2 class="h4 mb-3">Resources</h2>
+              <ul class="resources-list">
+                <li>Spoken Tutorial</li>
+                <li>Documentation</li>
+                <li>Downloads</li>
+              </ul>
+              
+              <h2 class="h4 mt-4 mb-3">Events</h2>
+              <ul class="events-list">
+                <li>Workshop</li>
+                <li>Hackathon</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {# Right Column: Notice Board and Contact #}
+        <div class="col-lg-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h2 class="h4 mb-3">Notice Board</h2>
+              <ul class="notice-list">
+                <li>Jobs</li>
+                <li>News & Events</li>
+              </ul>
+              
+              <div class="contact-info mt-4">
+                <h2 class="h4 mb-3">Contact Information</h2>
+                <p>Prof. Kannan Moudgalya<br>
+                Priyam Nayak<br>
+                Email: contact_dwsim@fossee.in<br>
+                Phone: 022-2576-4111<br>
+                [10.00 AM - 6.00 PM]</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  {# Footer #}
+  <footer class="footer py-4 bg-dark text-white">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="mb-0">&copy; {{ "now"|date("Y") }} DWSIM Project</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <div class="supported-by">
+            <p class="small mb-0">Supported by the National Mission on Education through ICT, 
+            Ministry of Education, Government of India</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <js-bottom-placeholder token="{{ placeholder_token }}">
+</body>
+</html>
