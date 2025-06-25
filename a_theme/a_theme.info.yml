@@ -1,0 +1,12 @@
+name: 'A Theme'
+type: theme
+description: 'Custom homepage theme matching provided design.'
+core_version_requirement: ^10
+base theme: stable
+libraries:
+  - a_theme/global-styling
+regions:
+  header: 'Header'
+  content: 'Content'
+  sidebar: 'Sidebar'
+  footer: 'Footer'
