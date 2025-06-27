@@ -1,4 +1,4 @@
-/* ===== IMPROVED DESIGN SYSTEM ===== */
+
 :root {
   --primary: #2c6fbb;
   --secondary: #f8f9fa;
@@ -35,7 +35,7 @@ body {
   border: 1px solid rgba(44, 111, 187, 0.1);
 }
 
-/* ===== FIXED HEADER SOLUTION ===== */
+
 .header-container {
   position: relative;
   transition: var(--transition);
@@ -155,7 +155,7 @@ nav ul li a:hover::after {
   transform-origin: left;
 }
 
-/* ===== MODERN HERO SECTION ===== */
+/* =====HERO SECTION ===== */
 .hero {
   position: relative;
   height: 500px;
@@ -224,7 +224,7 @@ nav ul li a:hover::after {
   background: #ffa000;
 }
 
-/* ===== ENHANCED CONTENT AREA ===== */
+/* ====CONTENT AREA ===== */
 .content {
   padding: 40px;
 }
@@ -277,7 +277,7 @@ nav ul li a:hover::after {
   align-self: flex-start;
 }
 
-/* ===== FIXED ACTIVITY SECTION ===== */
+
 .get-involved {
   background: linear-gradient(to right, var(--accent), #0a7d48);
   color: white;
@@ -394,7 +394,7 @@ nav ul li a:hover::after {
   right: 15px;
 }
 
-/* ===== IMPROVED CARDS SECTION ===== */
+
 .card-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -663,7 +663,7 @@ nav ul li a:hover::after {
   background: #1a56db;
 }
 
-/* ===== ENHANCED FOOTER ===== */
+/* ===== FOOTER ===== */
 footer {
   background: linear-gradient(to right, #1a202c, #2d3748);
   color: white;
