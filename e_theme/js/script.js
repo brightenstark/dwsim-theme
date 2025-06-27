@@ -3,7 +3,7 @@
 
   Drupal.behaviors.eTheme = {
     attach: function (context, settings) {
-      // Fixed header solution - now applies to entire header container
+       
       once('stickyHeader', '.header-container', context).forEach(function (headerContainer) {
         const headerHeight = headerContainer.offsetHeight;
         const headerOffset = 200;
@@ -54,7 +54,7 @@
       // Get Involved button with ripple effect
       once('getInvolved', '.get-involved', context).forEach(function (button) {
         button.addEventListener('click', function(e) {
-          // Create ripple effect
+          // ripple effect
           createRipple(e);
           
           // Button animation
