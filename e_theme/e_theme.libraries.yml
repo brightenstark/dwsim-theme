@@ -1,0 +1,13 @@
+global-styling:
+  css:
+    theme:
+      css/style.css: {}
+      css/animations.css: {}
+  js:
+    js/script.js: {}
+    js/animations.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/once
+    - core/intersection-observer

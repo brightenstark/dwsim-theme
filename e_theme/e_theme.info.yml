@@ -1,0 +1,13 @@
+name: 'E Theme'
+type: theme
+description: 'Enhanced DWSIM theme with professional features and animations'
+core_version_requirement: ^10
+base theme: stable
+libraries:
+  - e_theme/global-styling
+regions:
+  header: 'Header'
+  content: 'Content'
+  sidebar: 'Sidebar'
+  footer: 'Footer'
+screenshot: screenshot.png
