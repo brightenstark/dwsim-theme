@@ -1,0 +1,12 @@
+name: 'c Theme'
+type: theme
+description: 'Enhanced DWSIM theme with professional design improvements'
+core_version_requirement: ^10
+base theme: stable
+libraries:
+  - c_theme/global-styling
+regions:
+  header: 'Header'
+  content: 'Content'
+  sidebar: 'Sidebar'
+  footer: 'Footer'
